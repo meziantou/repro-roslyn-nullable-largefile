@@ -1,6 +1,4 @@
-﻿namespace Meziantou.Framework.Http;
-
-public sealed class HstsDomainPolicy
+﻿public sealed class HstsDomainPolicy
 {
     internal HstsDomainPolicy(string host, DateTimeOffset expiresAt, bool includeSubdomains)
     {

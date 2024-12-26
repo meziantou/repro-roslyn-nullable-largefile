@@ -2,8 +2,6 @@
 using System.Collections;
 using System.ComponentModel.Design;
 
-namespace Meziantou.Framework.Http;
-
 public sealed partial class HstsDomainPolicyCollection : IEnumerable<HstsDomainPolicy>
 {
     private readonly List<ConcurrentDictionary<string, HstsDomainPolicy>> _policies = new(capacity: 8);
