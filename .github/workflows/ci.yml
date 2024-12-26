@@ -5,8 +5,16 @@ on:
       - '*'
 
 jobs:  
-  build:
+  build_linux:
     runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup .NET Core (global.json)
+        uses: actions/setup-dotnet@v4
+      - run: dotnet build repro.csproj --configuration Release
+      
+  build_windows:
+    runs-on: windows-2022
     steps:
       - uses: actions/checkout@v4
       - name: Setup .NET Core (global.json)
