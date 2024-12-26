@@ -1,0 +1,1 @@
+record Dummy(string A, System.DateTimeOffset B, bool C);
